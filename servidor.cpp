@@ -22,7 +22,7 @@ public:
             return grpc::Status::OK;
         }
 
-        grpc::gerencia_notas::Nota nova_nota;
+    gerencia_notas::Nota nova_nota;
         nova_nota.set_ra(request->ra());
         nova_nota.set_cod_disciplina(request->cod_disciplina());
         nova_nota.set_nota(request->nota());
@@ -59,7 +59,7 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status consultarNota(grpc::ServerContext* context,
+    grpc::Status ConsultarNota(grpc::ServerContext* context,
                                const gerencia_notas::AlunoDisciplinaRequest* request,
                                gerencia_notas::ConsultaNotaResponse* response) override {
 
@@ -76,10 +76,9 @@ public:
             return grpc::Status::OK;
         }
 
-        response->set_nota(db_notas_cpp[chave]);
+        *(response->mutable_nota()) = db_notas_cpp[chave];
         response->set_sucesso(true);
-        response->set_msg("Nota: " + std::to_string(db_notas_cpp[chave].nota()));
-
+        // msg_erro só é usada para erro, não existe campo msg para sucesso
         return grpc::Status::OK;
     }
 
@@ -110,8 +109,7 @@ public:
         double media = soma / count;
         response->set_media(media);
         response->set_sucesso(true);
-        response->set_msg("Média calculada com sucesso.");
-
+        // msg_erro só é usada para erro
         return grpc::Status::OK;
     }
 
