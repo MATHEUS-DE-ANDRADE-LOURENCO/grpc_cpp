@@ -1,2 +1,5 @@
+/workspaces/grpc_cpp/build/CMakeFiles/generate_grpc_files.dir
+/workspaces/grpc_cpp/build/CMakeFiles/servidor_cpp.dir
+/workspaces/grpc_cpp/build/CMakeFiles/cliente_cpp.dir
 /workspaces/grpc_cpp/build/CMakeFiles/edit_cache.dir
 /workspaces/grpc_cpp/build/CMakeFiles/rebuild_cache.dir

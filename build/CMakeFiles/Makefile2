@@ -63,7 +63,9 @@ CMAKE_BINARY_DIR = /workspaces/grpc_cpp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/generate_grpc_files.dir/all
+all: CMakeFiles/servidor_cpp.dir/all
+all: CMakeFiles/cliente_cpp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,8 +73,88 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/generate_grpc_files.dir/clean
+clean: CMakeFiles/servidor_cpp.dir/clean
+clean: CMakeFiles/cliente_cpp.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/generate_grpc_files.dir
+
+# All Build rule for target.
+CMakeFiles/generate_grpc_files.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_grpc_files.dir/build.make CMakeFiles/generate_grpc_files.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_grpc_files.dir/build.make CMakeFiles/generate_grpc_files.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/grpc_cpp/build/CMakeFiles --progress-num=6 "Built target generate_grpc_files"
+.PHONY : CMakeFiles/generate_grpc_files.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/generate_grpc_files.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/generate_grpc_files.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/generate_grpc_files.dir/rule
+
+# Convenience name for target.
+generate_grpc_files: CMakeFiles/generate_grpc_files.dir/rule
+.PHONY : generate_grpc_files
+
+# clean rule for target.
+CMakeFiles/generate_grpc_files.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_grpc_files.dir/build.make CMakeFiles/generate_grpc_files.dir/clean
+.PHONY : CMakeFiles/generate_grpc_files.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/servidor_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/servidor_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/grpc_cpp/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target servidor_cpp"
+.PHONY : CMakeFiles/servidor_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/servidor_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/servidor_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/servidor_cpp.dir/rule
+
+# Convenience name for target.
+servidor_cpp: CMakeFiles/servidor_cpp.dir/rule
+.PHONY : servidor_cpp
+
+# clean rule for target.
+CMakeFiles/servidor_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/clean
+.PHONY : CMakeFiles/servidor_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cliente_cpp.dir
+
+# All Build rule for target.
+CMakeFiles/cliente_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/grpc_cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target cliente_cpp"
+.PHONY : CMakeFiles/cliente_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cliente_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cliente_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/grpc_cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/cliente_cpp.dir/rule
+
+# Convenience name for target.
+cliente_cpp: CMakeFiles/cliente_cpp.dir/rule
+.PHONY : cliente_cpp
+
+# clean rule for target.
+CMakeFiles/cliente_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/clean
+.PHONY : CMakeFiles/cliente_cpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

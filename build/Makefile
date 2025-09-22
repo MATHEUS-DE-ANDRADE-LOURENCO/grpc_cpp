@@ -116,6 +116,147 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named generate_grpc_files
+
+# Build rule for target.
+generate_grpc_files: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_grpc_files
+.PHONY : generate_grpc_files
+
+# fast build rule for target.
+generate_grpc_files/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_grpc_files.dir/build.make CMakeFiles/generate_grpc_files.dir/build
+.PHONY : generate_grpc_files/fast
+
+#=============================================================================
+# Target rules for targets named servidor_cpp
+
+# Build rule for target.
+servidor_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servidor_cpp
+.PHONY : servidor_cpp
+
+# fast build rule for target.
+servidor_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/build
+.PHONY : servidor_cpp/fast
+
+#=============================================================================
+# Target rules for targets named cliente_cpp
+
+# Build rule for target.
+cliente_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cliente_cpp
+.PHONY : cliente_cpp
+
+# fast build rule for target.
+cliente_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/build
+.PHONY : cliente_cpp/fast
+
+cliente.o: cliente.cpp.o
+.PHONY : cliente.o
+
+# target to build an object file
+cliente.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/cliente.cpp.o
+.PHONY : cliente.cpp.o
+
+cliente.i: cliente.cpp.i
+.PHONY : cliente.i
+
+# target to preprocess a source file
+cliente.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/cliente.cpp.i
+.PHONY : cliente.cpp.i
+
+cliente.s: cliente.cpp.s
+.PHONY : cliente.s
+
+# target to generate assembly for a file
+cliente.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/cliente.cpp.s
+.PHONY : cliente.cpp.s
+
+notas.grpc.pb.o: notas.grpc.pb.cc.o
+.PHONY : notas.grpc.pb.o
+
+# target to build an object file
+notas.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.grpc.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.grpc.pb.cc.o
+.PHONY : notas.grpc.pb.cc.o
+
+notas.grpc.pb.i: notas.grpc.pb.cc.i
+.PHONY : notas.grpc.pb.i
+
+# target to preprocess a source file
+notas.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.grpc.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.grpc.pb.cc.i
+.PHONY : notas.grpc.pb.cc.i
+
+notas.grpc.pb.s: notas.grpc.pb.cc.s
+.PHONY : notas.grpc.pb.s
+
+# target to generate assembly for a file
+notas.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.grpc.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.grpc.pb.cc.s
+.PHONY : notas.grpc.pb.cc.s
+
+notas.pb.o: notas.pb.cc.o
+.PHONY : notas.pb.o
+
+# target to build an object file
+notas.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.pb.cc.o
+.PHONY : notas.pb.cc.o
+
+notas.pb.i: notas.pb.cc.i
+.PHONY : notas.pb.i
+
+# target to preprocess a source file
+notas.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.pb.cc.i
+.PHONY : notas.pb.cc.i
+
+notas.pb.s: notas.pb.cc.s
+.PHONY : notas.pb.s
+
+# target to generate assembly for a file
+notas.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/notas.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cliente_cpp.dir/build.make CMakeFiles/cliente_cpp.dir/notas.pb.cc.s
+.PHONY : notas.pb.cc.s
+
+servidor.o: servidor.cpp.o
+.PHONY : servidor.o
+
+# target to build an object file
+servidor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/servidor.cpp.o
+.PHONY : servidor.cpp.o
+
+servidor.i: servidor.cpp.i
+.PHONY : servidor.i
+
+# target to preprocess a source file
+servidor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/servidor.cpp.i
+.PHONY : servidor.cpp.i
+
+servidor.s: servidor.cpp.s
+.PHONY : servidor.s
+
+# target to generate assembly for a file
+servidor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servidor_cpp.dir/build.make CMakeFiles/servidor_cpp.dir/servidor.cpp.s
+.PHONY : servidor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +265,21 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... generate_grpc_files"
+	@echo "... cliente_cpp"
+	@echo "... servidor_cpp"
+	@echo "... cliente.o"
+	@echo "... cliente.i"
+	@echo "... cliente.s"
+	@echo "... notas.grpc.pb.o"
+	@echo "... notas.grpc.pb.i"
+	@echo "... notas.grpc.pb.s"
+	@echo "... notas.pb.o"
+	@echo "... notas.pb.i"
+	@echo "... notas.pb.s"
+	@echo "... servidor.o"
+	@echo "... servidor.i"
+	@echo "... servidor.s"
 .PHONY : help
 
 

@@ -57,15 +57,15 @@ public:
         gerencia_notas::ConsultaNotaResponse reply;
         grpc::ClientContext context;
 
-        grpc::Status status = stub_->consultarNota(&context, request, &reply);
+            grpc::Status status = stub_->ConsultarNota(&context, request, &reply);
 
         std::cout << "[ConsultarNota] ";
         if (status.ok()) {
-            if (reply.sucesso()) {
-                std::cout << reply.msg() << std::endl;
-            } else {
-                std::cout << reply.msg_erro() << std::endl;
-            }
+                if (reply.sucesso()) {
+                    std::cout << "Nota consultada com sucesso." << std::endl;
+                } else {
+                    std::cout << reply.msg_erro() << std::endl;
+                }
         } else {
             std::cout << "Erro RPC: " << status.error_code()
                       << ": " << status.error_message() << std::endl;
@@ -118,7 +118,7 @@ public:
         }
     }
 
-    /*
+    /*S
     void ListarNotasExemplo(const std::string& ra) {
         // TODO: implementar streaming
     }
@@ -133,14 +133,23 @@ int main(int argc, char** argv) {
                                            grpc::InsecureChannelCredentials()));
 
     std::string ra = "456";
-    std::string cod_disciplina = "CIC0002";
-    double nota_inicial = 8.0;
-    double nota_alterada = 9.5;
 
-    client.AdicionarNotaExemplo(ra, cod_disciplina, nota_inicial);
-    client.AlterarNotaExemplo(ra, cod_disciplina, nota_alterada);
-    client.ConsultarNotaExemplo(ra, cod_disciplina);
+    // Adicionando várias notas para diferentes disciplinas
+    client.AdicionarNotaExemplo(ra, "CIC0002", 8.0);
+    client.AdicionarNotaExemplo(ra, "CIC0003", 7.5);
+    client.AdicionarNotaExemplo(ra, "CIC0004", 9.2);
+    client.AdicionarNotaExemplo(ra, "CIC0005", 6.8);
+
+    // Alterando uma nota
+    client.AlterarNotaExemplo(ra, "CIC0002", 9.5);
+
+    // Consultando uma nota específica
+    client.ConsultarNotaExemplo(ra, "CIC0002");
+
+    // Calculando média
     client.CalcularMediaExemplo(ra);
+
+    // Listando todas as notas do aluno
     client.ListarNotasAlunoExemplo(ra);
 
     return 0;
